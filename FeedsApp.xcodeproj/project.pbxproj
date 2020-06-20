@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,7 @@
 		C95A5344249E81730076F1BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C95A5343249E81730076F1BE /* Assets.xcassets */; };
 		C95A5347249E81730076F1BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C95A5345249E81730076F1BE /* LaunchScreen.storyboard */; };
 		C95A5352249E81740076F1BE /* FeedsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95A5351249E81740076F1BE /* FeedsAppTests.swift */; };
+		C95A5365249E8BEA0076F1BE /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95A5364249E8BEA0076F1BE /* FeedTableViewCell.swift */; };
 		EF3205413AEDEF5A5E9ACB67 /* Pods_FeedsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D845FD55183A021D546B00C /* Pods_FeedsApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		C95A534D249E81740076F1BE /* FeedsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeedsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C95A5351249E81740076F1BE /* FeedsAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsAppTests.swift; sourceTree = "<group>"; };
 		C95A5353249E81740076F1BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C95A5364249E8BEA0076F1BE /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +80,6 @@
 				0E6C19D6AA26B9F4BBA864A0 /* Pods-FeedsAppTests.debug.xcconfig */,
 				41D9AFF77A6F2F639CDAB43F /* Pods-FeedsAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -195,6 +196,7 @@
 		C95A5363249E827C0076F1BE /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				C95A5364249E8BEA0076F1BE /* FeedTableViewCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -371,6 +373,7 @@
 				C95A5342249E815E0076F1BE /* FeedsApp.xcdatamodeld in Sources */,
 				C95A5338249E815E0076F1BE /* AppDelegate.swift in Sources */,
 				C95A533A249E815E0076F1BE /* SceneDelegate.swift in Sources */,
+				C95A5365249E8BEA0076F1BE /* FeedTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
