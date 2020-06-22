@@ -26,7 +26,7 @@ struct NetworkManager {
     static let environment : NetworkEnvironment = .production
     let router = Router<FeedApi>()
     
-    func getNewMovies(page: Int, limit: Int,completion: @escaping (_ feed: [Feeds]?,_ error: String?)->()){
+    func getNewFeeds(page: Int, limit: Int,completion: @escaping (_ feed: [Feeds]?,_ error: String?)->()){
 
         router.request(.pageWithLimit(page: page, limit: limit)) { data, response, error in
             

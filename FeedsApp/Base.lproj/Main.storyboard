@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uNU-PR-vho">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="603"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="310" id="gxq-0p-jG8" customClass="FeedTableViewCell" customModule="FeedsApp" customModuleProvider="target">
@@ -137,18 +137,31 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="F3p-p0-gUU"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Page:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZpP-7I-NNG">
+                                <rect key="frame" x="317" y="649" width="53" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="1ed-wo-jOy"/>
+                                    <constraint firstAttribute="width" constant="53" id="suS-VK-yHI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZpP-7I-NNG" secondAttribute="trailing" constant="5" id="4lG-Mf-ied"/>
                             <constraint firstItem="uNU-PR-vho" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Cdz-bh-4Za"/>
                             <constraint firstItem="uNU-PR-vho" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="S8k-Eg-bGH"/>
                             <constraint firstItem="uNU-PR-vho" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UzY-JP-qgO"/>
-                            <constraint firstAttribute="bottom" secondItem="uNU-PR-vho" secondAttribute="bottom" id="kza-ho-lhW"/>
+                            <constraint firstAttribute="bottom" secondItem="uNU-PR-vho" secondAttribute="bottom" constant="20" id="kza-ho-lhW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZpP-7I-NNG" secondAttribute="bottom" constant="1" id="t0z-yn-bNL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="mcP-ir-XLc"/>
                     <connections>
+                        <outlet property="labelPageNumber" destination="ZpP-7I-NNG" id="x8v-o7-W5e"/>
                         <outlet property="tableFeedList" destination="uNU-PR-vho" id="eof-Qz-7Xa"/>
                     </connections>
                 </viewController>

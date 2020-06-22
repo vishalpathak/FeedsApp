@@ -11,17 +11,21 @@ import UIKit
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var tableFeedList: UITableView!
+    @IBOutlet weak var labelPageNumber: UILabel!
+    var activity = UIActivityIndicatorView()
+    //MARK:- Data Variables
     fileprivate var arrayInfoList = [FeedsInfoViewModel]()
     fileprivate var pageCount: Int = 1
     let objFetch = FeedDataInfoVM()
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         objFetch.dataReceivedDelegate = self
         getData(page: pageCount, limit: pageLimit)
     }
     
+    //MARK:- Get Data from API
     func getData(page: Int, limit: Int){
+        self.showActivityIndicator()
         objFetch.fetchDataFromApi(page: page, limit: pageLimit)
     }
 }
@@ -38,20 +42,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath){
-//        if indexPath.row == arrayInfoList.count - 1{
-//            pageCount =  pageCount + 1
-//            //getData(page: pageCount, limit: pageLimit)
-//        }
-//    }
-    
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
 
-        // UITableView only moves in one direction, y axis
         let currentOffset = scrollView.contentOffset.y
         let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
 
-        // Change 10.0 to adjust the distance from bottom
         if maximumOffset - currentOffset <= 10.0 {
             pageCount =  pageCount + 1
             getData(page: pageCount, limit: pageLimit)
@@ -65,14 +60,34 @@ extension HomeViewController: DataReceivedDelegate{
             print("Error:\(error)")
             return
         }
-        
         if let rowModel = rowViewModel{
             arrayInfoList = rowModel
-            //print("arrayInfoList count \(arrayInfoList.count), \(arrayInfoList)")
             DispatchQueue.main.async {
+                self.hideActivity()
+                self.labelPageNumber.text = "Page:\(self.pageCount)"
                 self.tableFeedList.reloadData()
             }
         }
+    }
+}
+
+//MARK:- For showing Activity Indicator
+extension HomeViewController{
+    func showActivityIndicator() {
+        if #available(iOS 13.0, *) {
+            activity = UIActivityIndicatorView(style: .large)
+        } else {
+            activity = UIActivityIndicatorView(style: .whiteLarge)
+        }
+        activity.center = view.center
+        activity.color = .red
+        activity.hidesWhenStopped = true
+        view.addSubview(activity)
+        activity.startAnimating()
+    }
+    
+    func hideActivity() {
+        activity.stopAnimating()
     }
 }
 

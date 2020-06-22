@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		344920DCA5742772B560D610 /* Pods_FeedsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 297F3870429CD2DD4A94A0DF /* Pods_FeedsAppTests.framework */; };
 		C925D04D24A05E1F003116F3 /* FeedsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C925D04C24A05E1F003116F3 /* FeedsViewModel.swift */; };
+		C956DB3424A1125D00F7F913 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C956DB3324A1125D00F7F913 /* Utils.swift */; };
 		C95A5338249E815E0076F1BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95A5337249E815E0076F1BE /* AppDelegate.swift */; };
 		C95A533A249E815E0076F1BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95A5339249E815E0076F1BE /* SceneDelegate.swift */; };
 		C95A533C249E815E0076F1BE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95A533B249E815E0076F1BE /* HomeViewController.swift */; };
@@ -46,6 +47,7 @@
 		2C652C5CCAE68346044D2F75 /* Pods-FeedsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedsApp.release.xcconfig"; path = "Target Support Files/Pods-FeedsApp/Pods-FeedsApp.release.xcconfig"; sourceTree = "<group>"; };
 		41D9AFF77A6F2F639CDAB43F /* Pods-FeedsAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedsAppTests.release.xcconfig"; path = "Target Support Files/Pods-FeedsAppTests/Pods-FeedsAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		C925D04C24A05E1F003116F3 /* FeedsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsViewModel.swift; sourceTree = "<group>"; };
+		C956DB3324A1125D00F7F913 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		C95A5334249E815E0076F1BE /* FeedsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C95A5337249E815E0076F1BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C95A5339249E815E0076F1BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 		C95A5361249E82370076F1BE /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				C956DB3324A1125D00F7F913 /* Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 				C9799E0B24A091BE00942B8F /* FeedAPI.swift in Sources */,
 				C9799E0924A0915200942B8F /* NetworkManager.swift in Sources */,
 				C9799E0724A08FB400942B8F /* Router.swift in Sources */,
+				C956DB3424A1125D00F7F913 /* Utils.swift in Sources */,
 				C95A533C249E815E0076F1BE /* HomeViewController.swift in Sources */,
 				C9799E0324A08F4000942B8F /* ServiceConfig.swift in Sources */,
 				C9799E0524A08F7100942B8F /* ParameterEncoding.swift in Sources */,
