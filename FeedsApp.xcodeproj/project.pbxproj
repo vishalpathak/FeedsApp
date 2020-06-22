@@ -20,6 +20,11 @@
 		C95A5365249E8BEA0076F1BE /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95A5364249E8BEA0076F1BE /* FeedTableViewCell.swift */; };
 		C9799DFF24A0897100942B8F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9799DFE24A0897100942B8F /* Constants.swift */; };
 		C9799E0124A08BAA00942B8F /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9799E0024A08BAA00942B8F /* DataModel.swift */; };
+		C9799E0324A08F4000942B8F /* ServiceConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9799E0224A08F4000942B8F /* ServiceConfig.swift */; };
+		C9799E0524A08F7100942B8F /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9799E0424A08F7100942B8F /* ParameterEncoding.swift */; };
+		C9799E0724A08FB400942B8F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9799E0624A08FB400942B8F /* Router.swift */; };
+		C9799E0924A0915200942B8F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9799E0824A0915200942B8F /* NetworkManager.swift */; };
+		C9799E0B24A091BE00942B8F /* FeedAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9799E0A24A091BE00942B8F /* FeedAPI.swift */; };
 		EF3205413AEDEF5A5E9ACB67 /* Pods_FeedsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D845FD55183A021D546B00C /* Pods_FeedsApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +61,11 @@
 		C95A5364249E8BEA0076F1BE /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		C9799DFE24A0897100942B8F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C9799E0024A08BAA00942B8F /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		C9799E0224A08F4000942B8F /* ServiceConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceConfig.swift; sourceTree = "<group>"; };
+		C9799E0424A08F7100942B8F /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		C9799E0624A08FB400942B8F /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		C9799E0824A0915200942B8F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		C9799E0A24A091BE00942B8F /* FeedAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +111,7 @@
 		C925D04924A05D13003116F3 /* NetworkManager */ = {
 			isa = PBXGroup;
 			children = (
+				C9799E0824A0915200942B8F /* NetworkManager.swift */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
@@ -108,6 +119,9 @@
 		C925D04A24A05D2E003116F3 /* ServiceConfig */ = {
 			isa = PBXGroup;
 			children = (
+				C9799E0224A08F4000942B8F /* ServiceConfig.swift */,
+				C9799E0424A08F7100942B8F /* ParameterEncoding.swift */,
+				C9799E0624A08FB400942B8F /* Router.swift */,
 			);
 			path = ServiceConfig;
 			sourceTree = "<group>";
@@ -115,6 +129,7 @@
 		C925D04B24A05D59003116F3 /* APIEndPoints */ = {
 			isa = PBXGroup;
 			children = (
+				C9799E0A24A091BE00942B8F /* FeedAPI.swift */,
 			);
 			path = APIEndPoints;
 			sourceTree = "<group>";
@@ -402,7 +417,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9799E0B24A091BE00942B8F /* FeedAPI.swift in Sources */,
+				C9799E0924A0915200942B8F /* NetworkManager.swift in Sources */,
+				C9799E0724A08FB400942B8F /* Router.swift in Sources */,
 				C95A533C249E815E0076F1BE /* HomeViewController.swift in Sources */,
+				C9799E0324A08F4000942B8F /* ServiceConfig.swift in Sources */,
+				C9799E0524A08F7100942B8F /* ParameterEncoding.swift in Sources */,
 				C95A5342249E815E0076F1BE /* FeedsApp.xcdatamodeld in Sources */,
 				C95A5338249E815E0076F1BE /* AppDelegate.swift in Sources */,
 				C95A533A249E815E0076F1BE /* SceneDelegate.swift in Sources */,
