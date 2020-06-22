@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class FeedTableViewCell: UITableViewCell {
 
@@ -25,6 +26,8 @@ class FeedTableViewCell: UITableViewCell {
     @IBOutlet weak var labelLikes: UILabel!
     
     @IBOutlet weak var labelComments: UILabel!
+    
+    @IBOutlet weak var layoutHeightConstant: NSLayoutConstraint!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -38,7 +41,34 @@ class FeedTableViewCell: UITableViewCell {
     //MARK:- ViewModel Object set data to UI object using ViewModel
     var dataInfoModel: FeedsInfoViewModel? {
         didSet{
+            labelUserName.text = ("\(dataInfoModel?.name ?? "") \(dataInfoModel?.lastName ?? "")")
+            labelDesignation.text = ("\(dataInfoModel?.designation ?? "")")
+            labelArticleContent.text = dataInfoModel?.content
+            labelLikes.text = ("\(dataInfoModel?.likes ?? "0 likes")")
+            labelComments.text = ("\(dataInfoModel?.comments ?? "0 comments")")
+            labelTimeCreated.text = ("\(dataInfoModel?.createdAt ?? "")")
             
+            if let userUrl = dataInfoModel?.avatar{
+                imageUser.layer.cornerRadius = imageUser.frame.height/2
+                imageUser.clipsToBounds = true
+                guard let url = URL(string: userUrl) else { return }
+                let imgUser = ImageResource(downloadURL: url)
+                imageUser.kf.setImage(with: imgUser, placeholder: nil, options: nil, progressBlock: nil) { (result) in
+                }
+            }
+            
+            if let mediaUrl = dataInfoModel?.image{
+                if mediaUrl.count > 0{
+                    layoutHeightConstant.constant = 162.0
+                    guard let url = URL(string: mediaUrl) else { return }
+                    let imgArticle = ImageResource(downloadURL: url)
+                    imageArticle.kf.setImage(with: imgArticle, placeholder: nil, options: nil, progressBlock: nil) { (result) in
+                    }
+                }else{
+                    layoutHeightConstant.constant = 0.0
+                    imageArticle.image = nil
+                }
+            }
         }
     }
 }
