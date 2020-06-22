@@ -15,3 +15,5 @@ struct CellIdentifier {
 
 //MARK:- Per page limit items count
 var pageLimit = 10
+
+let navigationTitle = "User Feeds"

@@ -19,6 +19,7 @@ class HomeViewController: UIViewController {
     let objFetch = FeedDataInfoVM()
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = navigationTitle
         objFetch.dataReceivedDelegate = self
         getData(page: pageCount, limit: pageLimit)
     }
@@ -57,6 +58,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
 extension HomeViewController: DataReceivedDelegate{
     func didGetDataFromAPI(rowViewModel: [FeedsInfoViewModel]?, error: String?) {
         if let error = error{
+            DispatchQueue.main.async {
+                self.hideActivity()
+            }
             print("Error:\(error)")
             return
         }
