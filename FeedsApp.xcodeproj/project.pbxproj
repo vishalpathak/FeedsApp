@@ -18,6 +18,8 @@
 		C95A5347249E81730076F1BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C95A5345249E81730076F1BE /* LaunchScreen.storyboard */; };
 		C95A5352249E81740076F1BE /* FeedsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95A5351249E81740076F1BE /* FeedsAppTests.swift */; };
 		C95A5365249E8BEA0076F1BE /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95A5364249E8BEA0076F1BE /* FeedTableViewCell.swift */; };
+		C9799DFF24A0897100942B8F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9799DFE24A0897100942B8F /* Constants.swift */; };
+		C9799E0124A08BAA00942B8F /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9799E0024A08BAA00942B8F /* DataModel.swift */; };
 		EF3205413AEDEF5A5E9ACB67 /* Pods_FeedsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D845FD55183A021D546B00C /* Pods_FeedsApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +54,8 @@
 		C95A5351249E81740076F1BE /* FeedsAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsAppTests.swift; sourceTree = "<group>"; };
 		C95A5353249E81740076F1BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C95A5364249E8BEA0076F1BE /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		C9799DFE24A0897100942B8F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C9799E0024A08BAA00942B8F /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +198,7 @@
 		C95A535F249E82070076F1BE /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
+				C9799E0024A08BAA00942B8F /* DataModel.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -216,6 +221,7 @@
 		C95A5362249E82430076F1BE /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				C9799DFE24A0897100942B8F /* Constants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -400,6 +406,8 @@
 				C95A5342249E815E0076F1BE /* FeedsApp.xcdatamodeld in Sources */,
 				C95A5338249E815E0076F1BE /* AppDelegate.swift in Sources */,
 				C95A533A249E815E0076F1BE /* SceneDelegate.swift in Sources */,
+				C9799DFF24A0897100942B8F /* Constants.swift in Sources */,
+				C9799E0124A08BAA00942B8F /* DataModel.swift in Sources */,
 				C925D04D24A05E1F003116F3 /* FeedsViewModel.swift in Sources */,
 				C95A5365249E8BEA0076F1BE /* FeedTableViewCell.swift in Sources */,
 			);

@@ -32,8 +32,13 @@ class FeedTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
-
+    
+    //MARK:- ViewModel Object set data to UI object using ViewModel
+    var dataInfoModel: FeedsInfoViewModel? {
+        didSet{
+            
+        }
+    }
 }

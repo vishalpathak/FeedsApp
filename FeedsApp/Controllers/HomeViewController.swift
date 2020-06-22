@@ -21,11 +21,14 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return arrayInfoList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableFeedList.dequeueReusableCell(withIdentifier: CellIdentifier.feedsCell) as! FeedTableViewCell
+        let obj = arrayInfoList[indexPath.row]
+        cell.dataInfoModel = obj
+        return cell
     }
     
     
