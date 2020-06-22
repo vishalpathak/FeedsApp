@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		344920DCA5742772B560D610 /* Pods_FeedsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 297F3870429CD2DD4A94A0DF /* Pods_FeedsAppTests.framework */; };
+		C925D04D24A05E1F003116F3 /* FeedsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C925D04C24A05E1F003116F3 /* FeedsViewModel.swift */; };
 		C95A5338249E815E0076F1BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95A5337249E815E0076F1BE /* AppDelegate.swift */; };
 		C95A533A249E815E0076F1BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95A5339249E815E0076F1BE /* SceneDelegate.swift */; };
 		C95A533C249E815E0076F1BE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95A533B249E815E0076F1BE /* HomeViewController.swift */; };
@@ -37,6 +38,7 @@
 		297F3870429CD2DD4A94A0DF /* Pods_FeedsAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeedsAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C652C5CCAE68346044D2F75 /* Pods-FeedsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedsApp.release.xcconfig"; path = "Target Support Files/Pods-FeedsApp/Pods-FeedsApp.release.xcconfig"; sourceTree = "<group>"; };
 		41D9AFF77A6F2F639CDAB43F /* Pods-FeedsAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedsAppTests.release.xcconfig"; path = "Target Support Files/Pods-FeedsAppTests/Pods-FeedsAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		C925D04C24A05E1F003116F3 /* FeedsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsViewModel.swift; sourceTree = "<group>"; };
 		C95A5334249E815E0076F1BE /* FeedsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C95A5337249E815E0076F1BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C95A5339249E815E0076F1BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +94,27 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C925D04924A05D13003116F3 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		C925D04A24A05D2E003116F3 /* ServiceConfig */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ServiceConfig;
+			sourceTree = "<group>";
+		};
+		C925D04B24A05D59003116F3 /* APIEndPoints */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = APIEndPoints;
+			sourceTree = "<group>";
+		};
 		C95A532B249E815E0076F1BE = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +138,7 @@
 		C95A5336249E815E0076F1BE /* FeedsApp */ = {
 			isa = PBXGroup;
 			children = (
+				C925D04B24A05D59003116F3 /* APIEndPoints */,
 				C95A5362249E82430076F1BE /* Constants */,
 				C95A5361249E82370076F1BE /* Utils */,
 				C95A535F249E82070076F1BE /* DataModel */,
@@ -154,6 +178,8 @@
 		C95A535D249E81D60076F1BE /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				C925D04A24A05D2E003116F3 /* ServiceConfig */,
+				C925D04924A05D13003116F3 /* NetworkManager */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
@@ -175,6 +201,7 @@
 		C95A5360249E82280076F1BE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C925D04C24A05E1F003116F3 /* FeedsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -373,6 +400,7 @@
 				C95A5342249E815E0076F1BE /* FeedsApp.xcdatamodeld in Sources */,
 				C95A5338249E815E0076F1BE /* AppDelegate.swift in Sources */,
 				C95A533A249E815E0076F1BE /* SceneDelegate.swift in Sources */,
+				C925D04D24A05E1F003116F3 /* FeedsViewModel.swift in Sources */,
 				C95A5365249E8BEA0076F1BE /* FeedTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
