@@ -1,4 +1,4 @@
-framework module Pods_FeedsApp {
+module Pods_FeedsApp {
   umbrella header "Pods-FeedsApp-umbrella.h"
 
   export *
