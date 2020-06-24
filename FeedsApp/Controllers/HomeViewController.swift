@@ -26,7 +26,9 @@ class HomeViewController: UIViewController {
     
     //MARK:- Get Data from API
     func getData(page: Int, limit: Int){
-        self.showActivityIndicator()
+        if !activity.isAnimating{
+            self.showActivityIndicator()
+        }
         objFetch.fetchDataFromApi(page: page, limit: pageLimit)
     }
 }

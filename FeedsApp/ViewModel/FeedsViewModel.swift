@@ -64,6 +64,8 @@ class FeedDataInfoVM: MapFeedDataModel {
                 if feed.count > 0{
                     let arr = self.mapToViewModelFromAPI(feeds: feed)
                     self.dataReceivedDelegate?.didGetDataFromAPI(rowViewModel: arr, error: nil)
+                }else{
+                    self.dataReceivedDelegate?.didGetDataFromAPI(rowViewModel: nil, error: "No Data found for page")
                 }
             }
         }
