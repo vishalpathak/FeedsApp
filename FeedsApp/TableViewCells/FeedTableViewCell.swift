@@ -44,8 +44,10 @@ class FeedTableViewCell: UITableViewCell {
             labelUserName.text = ("\(dataInfoModel?.name ?? "") \(dataInfoModel?.lastName ?? "")")
             labelDesignation.text = ("\(dataInfoModel?.designation ?? "")")
             labelArticleContent.text = dataInfoModel?.content
-            labelLikes.text = ("\(dataInfoModel?.likes ?? "0 likes")")
-            labelComments.text = ("\(dataInfoModel?.comments ?? "0 comments")")
+            let strLikes = "\(dataInfoModel?.likes ?? "0") likes"
+            labelLikes.text = ("\(strLikes)")
+            let strComments = "\(dataInfoModel?.comments ?? "0") comments"
+            labelComments.text = ("\(strComments)")
             labelTimeCreated.text = ("\(dataInfoModel?.createdAt ?? "")")
             
             if let userUrl = dataInfoModel?.avatar{

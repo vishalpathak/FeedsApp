@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -27,6 +27,7 @@
 		C9799E0724A08FB400942B8F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9799E0624A08FB400942B8F /* Router.swift */; };
 		C9799E0924A0915200942B8F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9799E0824A0915200942B8F /* NetworkManager.swift */; };
 		C9799E0B24A091BE00942B8F /* FeedAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9799E0A24A091BE00942B8F /* FeedAPI.swift */; };
+		C97C5C5024B22BA200AEBAD8 /* DBHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97C5C4F24B22BA200AEBAD8 /* DBHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		C9799E0624A08FB400942B8F /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		C9799E0824A0915200942B8F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		C9799E0A24A091BE00942B8F /* FeedAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedAPI.swift; sourceTree = "<group>"; };
+		C97C5C4F24B22BA200AEBAD8 /* DBHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHandler.swift; sourceTree = "<group>"; };
 		FD0232E57EA9C79004068C4B /* Pods-FeedsAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedsAppTests.debug.xcconfig"; path = "Target Support Files/Pods-FeedsAppTests/Pods-FeedsAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -199,6 +201,7 @@
 		C95A535E249E81EB0076F1BE /* DBHandler */ = {
 			isa = PBXGroup;
 			children = (
+				C97C5C4F24B22BA200AEBAD8 /* DBHandler.swift */,
 			);
 			path = DBHandler;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				C956DB3424A1125D00F7F913 /* Utils.swift in Sources */,
 				C95A533C249E815E0076F1BE /* HomeViewController.swift in Sources */,
 				C9799E0324A08F4000942B8F /* ServiceConfig.swift in Sources */,
+				C97C5C5024B22BA200AEBAD8 /* DBHandler.swift in Sources */,
 				C9799E0524A08F7100942B8F /* ParameterEncoding.swift in Sources */,
 				C95A5342249E815E0076F1BE /* FeedsApp.xcdatamodeld in Sources */,
 				C95A5338249E815E0076F1BE /* AppDelegate.swift in Sources */,

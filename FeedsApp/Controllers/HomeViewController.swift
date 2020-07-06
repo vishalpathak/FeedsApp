@@ -16,10 +16,12 @@ class HomeViewController: UIViewController {
     //MARK:- Data Variables
     fileprivate var arrayInfoList = [FeedsInfoViewModel]()
     fileprivate var pageCount: Int = 1
+    fileprivate var isLoadNextPage: Bool?
     let objFetch = FeedDataInfoVM()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = navigationTitle
+        isLoadNextPage = true
         objFetch.dataReceivedDelegate = self
         getData(page: pageCount, limit: pageLimit)
     }
@@ -51,8 +53,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
         let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
 
         if maximumOffset - currentOffset <= 10.0 {
-            pageCount =  pageCount + 1
-            getData(page: pageCount, limit: pageLimit)
+            if isLoadNextPage!{
+                isLoadNextPage = false
+                pageCount =  pageCount + 1
+                print("PageNumber:\(pageCount)")
+                getData(page: pageCount, limit: pageLimit)
+            }
         }
     }
 }
@@ -68,6 +74,7 @@ extension HomeViewController: DataReceivedDelegate{
         }
         if let rowModel = rowViewModel{
             arrayInfoList = rowModel
+            isLoadNextPage = true
             DispatchQueue.main.async {
                 self.hideActivity()
                 self.labelPageNumber.text = "Page:\(self.pageCount)"
