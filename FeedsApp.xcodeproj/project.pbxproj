@@ -28,6 +28,8 @@
 		C9799E0924A0915200942B8F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9799E0824A0915200942B8F /* NetworkManager.swift */; };
 		C9799E0B24A091BE00942B8F /* FeedAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9799E0A24A091BE00942B8F /* FeedAPI.swift */; };
 		C97C5C5024B22BA200AEBAD8 /* DBHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97C5C4F24B22BA200AEBAD8 /* DBHandler.swift */; };
+		C9FA833724B6FD4100E57B37 /* FeedsModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FA833524B6FD4100E57B37 /* FeedsModel+CoreDataClass.swift */; };
+		C9FA833824B6FD4100E57B37 /* FeedsModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FA833624B6FD4100E57B37 /* FeedsModel+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		C9799E0824A0915200942B8F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		C9799E0A24A091BE00942B8F /* FeedAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedAPI.swift; sourceTree = "<group>"; };
 		C97C5C4F24B22BA200AEBAD8 /* DBHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHandler.swift; sourceTree = "<group>"; };
+		C9FA833524B6FD4100E57B37 /* FeedsModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedsModel+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C9FA833624B6FD4100E57B37 /* FeedsModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedsModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FD0232E57EA9C79004068C4B /* Pods-FeedsAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedsAppTests.debug.xcconfig"; path = "Target Support Files/Pods-FeedsAppTests/Pods-FeedsAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,6 +136,8 @@
 		C95A532B249E815E0076F1BE = {
 			isa = PBXGroup;
 			children = (
+				C9FA833524B6FD4100E57B37 /* FeedsModel+CoreDataClass.swift */,
+				C9FA833624B6FD4100E57B37 /* FeedsModel+CoreDataProperties.swift */,
 				C95A5336249E815E0076F1BE /* FeedsApp */,
 				C95A5350249E81740076F1BE /* FeedsAppTests */,
 				C95A5335249E815E0076F1BE /* Products */,
@@ -405,11 +411,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9FA833824B6FD4100E57B37 /* FeedsModel+CoreDataProperties.swift in Sources */,
 				C9799E0B24A091BE00942B8F /* FeedAPI.swift in Sources */,
 				C9799E0924A0915200942B8F /* NetworkManager.swift in Sources */,
 				C9799E0724A08FB400942B8F /* Router.swift in Sources */,
 				C956DB3424A1125D00F7F913 /* Utils.swift in Sources */,
 				C95A533C249E815E0076F1BE /* HomeViewController.swift in Sources */,
+				C9FA833724B6FD4100E57B37 /* FeedsModel+CoreDataClass.swift in Sources */,
 				C9799E0324A08F4000942B8F /* ServiceConfig.swift in Sources */,
 				C97C5C5024B22BA200AEBAD8 /* DBHandler.swift in Sources */,
 				C9799E0524A08F7100942B8F /* ParameterEncoding.swift in Sources */,

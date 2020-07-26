@@ -39,7 +39,7 @@ class FeedTableViewCell: UITableViewCell {
     }
     
     //MARK:- ViewModel Object set data to UI object using ViewModel
-    var dataInfoModel: FeedsInfoViewModel? {
+    var dataInfoModel: FeedsModel? {
         didSet{
             labelUserName.text = ("\(dataInfoModel?.name ?? "") \(dataInfoModel?.lastName ?? "")")
             labelDesignation.text = ("\(dataInfoModel?.designation ?? "")")

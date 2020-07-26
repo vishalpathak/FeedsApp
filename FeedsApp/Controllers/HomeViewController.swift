@@ -14,7 +14,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var labelPageNumber: UILabel!
     var activity = UIActivityIndicatorView()
     //MARK:- Data Variables
-    fileprivate var arrayInfoList = [FeedsInfoViewModel]()
+    fileprivate var arrayInfoList = [FeedsModel]()
     fileprivate var pageCount: Int = 1
     fileprivate var isLoadNextPage: Bool?
     let objFetch = FeedDataInfoVM()
@@ -31,7 +31,8 @@ class HomeViewController: UIViewController {
         if !activity.isAnimating{
             self.showActivityIndicator()
         }
-        objFetch.fetchDataFromApi(page: page, limit: pageLimit)
+        //objFetch.fetchDataFromApi(page: page, limit: pageLimit)
+        objFetch.getAndCheckData(currentPage: page, limit: pageLimit)
     }
 }
 
@@ -64,7 +65,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
 }
 
 extension HomeViewController: DataReceivedDelegate{
-    func didGetDataFromAPI(rowViewModel: [FeedsInfoViewModel]?, error: String?) {
+    func didGetDataFromAPI(rowViewModel: [FeedsModel]?, error: String?) {
         if let error = error{
             DispatchQueue.main.async {
                 self.hideActivity()
@@ -82,6 +83,25 @@ extension HomeViewController: DataReceivedDelegate{
             }
         }
     }
+    
+//    func didGetDataFromAPI(rowViewModel: [FeedsInfoViewModel]?, error: String?) {
+//        if let error = error{
+//            DispatchQueue.main.async {
+//                self.hideActivity()
+//            }
+//            print("Error:\(error)")
+//            return
+//        }
+//        if let rowModel = rowViewModel{
+//            arrayInfoList = rowModel
+//            isLoadNextPage = true
+//            DispatchQueue.main.async {
+//                self.hideActivity()
+//                self.labelPageNumber.text = "Page:\(self.pageCount)"
+//                self.tableFeedList.reloadData()
+//            }
+//        }
+//    }
 }
 
 //MARK:- For showing Activity Indicator

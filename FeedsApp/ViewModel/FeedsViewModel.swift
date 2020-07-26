@@ -39,7 +39,7 @@ struct FeedsInfoViewModel {
 }
 
 protocol DataReceivedDelegate: class {
-    func didGetDataFromAPI(rowViewModel: [FeedsInfoViewModel]?, error: String?)
+    func didGetDataFromAPI(rowViewModel: [FeedsModel]?, error: String?)
 }
 
 protocol MapFeedDataModel {
@@ -52,6 +52,22 @@ class FeedDataInfoVM: MapFeedDataModel {
     
     var arrViewModel = [FeedsInfoViewModel]()
     
+    func getAndCheckData(currentPage: Int, limit: Int){
+        if UserDefaults.standard.value(forKey: getLastPageData) == nil{
+            fetchDataFromApi(page: currentPage, limit: limit)
+            UserDefaults.standard.set(currentPage, forKey: getLastPageData)
+        }else{
+            if let page = UserDefaults.standard.value(forKey: getLastPageData) as? Int{
+                if currentPage > page{
+                    fetchDataFromApi(page: page, limit: limit)
+                    UserDefaults.standard.set(currentPage, forKey: getLastPageData)
+                }else{
+                    fetchDataFromDB()
+                }
+            }
+        }
+    }
+    
     func fetchDataFromApi(page: Int, limit: Int){
         let networkManager = NetworkManager()
         networkManager.getNewFeeds(page: page, limit: limit) { (feedss, error) in
@@ -63,10 +79,24 @@ class FeedDataInfoVM: MapFeedDataModel {
             if let feed = feedss{
                 if feed.count > 0{
                     let arr = self.mapToViewModelFromAPI(feeds: feed)
-                    self.dataReceivedDelegate?.didGetDataFromAPI(rowViewModel: arr, error: nil)
+                    DBHandler.sharedDBHandler.saveDataForFeeds(entityModel: arr, entityName: "FeedsModel")
+                    self.fetchDataFromDB()
+                    //self.dataReceivedDelegate?.didGetDataFromAPI(rowViewModel: arr, error: nil)
                 }else{
                     self.dataReceivedDelegate?.didGetDataFromAPI(rowViewModel: nil, error: "No Data found for page")
                 }
+            }
+        }
+    }
+    
+    func fetchDataFromDB(){
+        DBHandler.sharedDBHandler.getDataForEntity(entityModelName: "FeedsModel") { (result, error) in
+            if let error = error{
+                self.dataReceivedDelegate?.didGetDataFromAPI(rowViewModel: nil, error: error)
+                return
+            }
+            if let result = result{
+                self.dataReceivedDelegate?.didGetDataFromAPI(rowViewModel: result as? [FeedsModel], error: nil)
             }
         }
     }
